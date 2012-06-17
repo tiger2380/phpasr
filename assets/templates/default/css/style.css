@@ -1,0 +1,19 @@
+/*
+********************
+WebSite: 
+Name: style.css
+Type: css
+Version: 3.0
+Author: FireDart
+********************
+*/
+/*Import Reset */
+@import url("reset.css");
+body {
+	background: #ffffff;
+	color: #42423d;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	margin: 0 auto;
+	padding: 0px;
+}
