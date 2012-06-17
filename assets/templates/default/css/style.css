@@ -138,7 +138,7 @@ body {
 }
 #snippet #snippet-header {
 	background: #323236 url('../images/header.png');
-	border-bottom: 1px solid #666666;
+	border: 1px solid #666666;
 	color: #ffffff;
 	font-size: 21px;
 	padding: 7px 14px;
@@ -149,10 +149,17 @@ body {
 	-khtml-border-radius: 3px 3px 0px 0px;
 	border-radius: 3px 3px 0px 0px;
 }
-
+#snippet #snippet-header #snippet-meta {
+	font-size: 14px;
+	float: right;
+	padding: 3px 0px;
+}
 /* Code */
-#code {
+.code {
 	background: #333333;
+	border-right: 1px solid #666666;
+	border-left: 1px solid #666666;
+	border-bottom: 1px solid #666666;
 	color: #ffffff;
 	white-space: pre;
 	font-family: monospace;
@@ -163,4 +170,56 @@ body {
 	-o-border-radius: 0px 0px 3px 3px;
 	-khtml-border-radius: 0px 0px 3px 3px;
 	border-radius: 0px 0px 3px 3px;
+}
+
+/* Comments */
+#comments {
+	margin: 21px 0 0 0;
+	width: 100%;
+}
+#comments #comments-header {
+	background: #efefef url('../images/header-light.png');
+	border: 1px solid #dddddd;
+	color: #666666;
+	font-size: 21px;
+	padding: 7px 14px;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+}
+#comments #comments-header #comments-meta {
+	font-size: 14px;
+	float: right;
+	padding: 3px 0px;
+}
+.comment {
+	border-bottom: 1px dashed #dddddd;
+	float: left;
+	margin: 14px 0px;
+	padding: 0px 0px 14px 0px;
+	width: 100%;
+}
+.comment .comment-user {
+	float: left;
+	width: 60px;
+}
+.comment .comment-user img {
+	background: #efefef url('../images/header-light.png');
+	padding: 5px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-khtml-border-radius: 50%;
+	border-radius: 50%;
+}
+.comment .comment-message {
+	float: left;
+	margin: 0 0 0 14px;
+}
+.comment .comment-message .comment-user-says {
+	font-style: italic;
+	font-weight: bold;
 }

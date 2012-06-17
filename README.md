@@ -5,6 +5,12 @@ phpacademy Snippet Repository
 
 **Original Post:** http://phpacademy.org/forum/viewtopic.php?f=35&t=16139
 
+About
+=================================
+----------------------------------------------------------------
+
+phpasr is designed to be a custom snippet manager for the phpacademy members. It will be written in OOP and driven with PDO for the mysql connections. 
+
 Road Map
 =================================
 ----------------------------------------------------------------
