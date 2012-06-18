@@ -69,45 +69,111 @@ echo $code->highlighter($inputCode);
 	
 	<div id="comments">
 		<div id="comments-header">Comments <div id="comments-meta">120 Comments</div></div>
-		<div class="comment">
-			<div class="comment-user">
-				<img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" />
+		<div id="comments-list" class="group">
+			<div class="comment">
+				<div class="comment-user">
+					<img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" />
+				</div>
+				<div class="comment-message">
+					<div class="comment-user-says">Admin says:</div>
+					Blah blah blah, this is a comment.
+				</div>
 			</div>
-			<div class="comment-message">
-				<div class="comment-user-says">Admin says:</div>
-				Blah blah blah, this is a comment.
+			
+			<div class="comment">
+				<div class="comment-user">
+					<img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" />
+				</div>
+				<div class="comment-message">
+					<div class="comment-user-says">Admin says:</div>
+					Blah blah blah, this is a comment.
+				</div>
 			</div>
+			
+			<div class="comment">
+				<div class="comment-user">
+					<img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" />
+				</div>
+				<div class="comment-message">
+					<div class="comment-user-says">Admin says:</div>
+					Blah blah blah, this is a comment.
+				</div>
+			</div>
+			
+			<div class="comment">
+				<div class="comment-user">
+					<img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" />
+				</div>
+				<div class="comment-message">
+					<div class="comment-user-says">Admin says:</div>
+					Blah blah blah, this is a comment.
+				</div>
+			</div>
+			
+			<div class="comment">
+				<div class="comment-user">
+					<img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" />
+				</div>
+				<div class="comment-message">
+					<div class="comment-user-says">Admin says:</div>
+					Blah blah blah, this is a comment.
+				</div>
+			</div>
+			
+			<div class="comment">
+				<div class="comment-user">
+					<img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" />
+				</div>
+				<div class="comment-message">
+					<div class="comment-user-says">Admin says:</div>
+					Blah blah blah, this is a comment.
+				</div>
+			</div>
+			
+			<div class="comment">
+				<div class="comment-user">
+					<img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" />
+				</div>
+				<div class="comment-message">
+					<div class="comment-user-says">Admin says:</div>
+					Blah blah blah, this is a comment.
+				</div>
+			</div>
+			
+			<div class="comment">
+				<div class="comment-user">
+					<img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" />
+				</div>
+				<div class="comment-message">
+					<div class="comment-user-says">Admin says:</div>
+					Blah blah blah, this is a comment.
+				</div>
+			</div>
+			
+			<div class="comment">
+				<div class="comment-user">
+					<img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" />
+				</div>
+				<div class="comment-message">
+					<div class="comment-user-says">Admin says:</div>
+					Blah blah blah, this is a comment.
+				</div>
+			</div>
+			
+			<div class="comment">
+				<div class="comment-user">
+					<img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" />
+				</div>
+				<div class="comment-message">
+					<div class="comment-user-says">Admin says:</div>
+					Blah blah blah, this is a comment.
+				</div>
+			</div>
+		
 		</div>
 		
-		<div class="comment">
-			<div class="comment-user">
-				<img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" />
-			</div>
-			<div class="comment-message">
-				<div class="comment-user-says">Admin says:</div>
-				Blah blah blah, this is a comment.
-			</div>
-		</div>
+		<div class="button group load-more">Load More Comments</div>
 		
-		<div class="comment">
-			<div class="comment-user">
-				<img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" />
-			</div>
-			<div class="comment-message">
-				<div class="comment-user-says">Admin says:</div>
-				Blah blah blah, this is a comment.
-			</div>
-		</div>
-		
-		<div class="comment">
-			<div class="comment-user">
-				<img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" />
-			</div>
-			<div class="comment-message">
-				<div class="comment-user-says">Admin says:</div>
-				Blah blah blah, this is a comment.
-			</div>
-		</div>
 	</div>
 </div>
 

@@ -164,7 +164,7 @@ body {
 	white-space: pre;
 	font-family: monospace;
 	display: block;
-	padding: 7px 21px;
+	padding: 0px 21px 14px 21px;
 	-webkit-border-radius: 0px 0px 3px 3px;
 	-moz-border-radius: 0px 0px 3px 3px;
 	-o-border-radius: 0px 0px 3px 3px;
@@ -192,8 +192,12 @@ body {
 }
 #comments #comments-header #comments-meta {
 	font-size: 14px;
+	font-weight: bold;
 	float: right;
 	padding: 3px 0px;
+}
+#comments #comments-list {
+	
 }
 .comment {
 	border-bottom: 1px dashed #dddddd;
@@ -222,4 +226,10 @@ body {
 .comment .comment-message .comment-user-says {
 	font-style: italic;
 	font-weight: bold;
+}
+
+.load-more {
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
 }
