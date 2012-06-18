@@ -142,7 +142,25 @@ FireDart's CSS Reset
 	.button.jumbo {
 		font: bold 20px/50px Verdana, Arial, Helvetica, sans-serif;
 	}
-
+	
+	.button.row {
+		margin: 0px 0px 0px -1px;
+	}
+	.button.row.left {
+		-webkit-border-radius: 3px 0px 0px 3px;
+		-moz-border-radius: 3px 0px 0px 3px;
+		-o-border-radius: 3px 0px 0px 3px;
+		-khtml-border-radius: 3px 0px 0px 3px;
+		border-radius: 3px 0px 0px 3px;
+	}
+	.button.row.right {
+		-webkit-border-radius: 0px 3px 3px 0px;
+		-moz-border-radius: 0px 3px 3px 0px;
+		-o-border-radius: 0px 3px 3px 0px;
+		-khtml-border-radius: 0px 3px 3px 0px;
+		border-radius: 0px 3px 3px 0px;
+	}
+	
 /* Floats */
 	.fleft {float: left;}
 	.fright {float: right;}

@@ -149,11 +149,55 @@ body {
 	-khtml-border-radius: 3px 3px 0px 0px;
 	border-radius: 3px 3px 0px 0px;
 }
-#snippet #snippet-header #snippet-meta {
-	font-size: 14px;
+#snippet #snippet-header #snippet-option {
 	float: right;
-	padding: 3px 0px;
+	margin: -7px 0px 0px 0px;
 }
+#snippet #snippet-info {
+	background: #efefef url('../images/header-light.png');
+	border-bottom: 1px solid #dddddd;
+	border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	
+	-webkit-border-radius: 0px 0px 3px 3px;
+	-moz-border-radius: 0px 0px 3px 3px;
+	-o-border-radius: 0px 0px 3px 3px;
+	-khtml-border-radius: 0px 0px 3px 3px;
+	border-radius: 0px 0px 3px 3px;
+}
+#snippet #snippet-info #snippet-info-avatar {
+	float: left;
+}
+#snippet #snippet-info #snippet-info-avatar img {
+	border: 7px solid #ffffff;
+}
+#snippet #snippet-info #snippet-info-username {
+	float: left;
+	font-weight: bold;
+	margin: 0 0 0 7px;
+}
+#snippet #snippet-info #snippet-info-username a {
+	font-weight: normal;
+	font-style: italic;
+}
+#snippet #snippet-info #snippet-tags {
+	border-top: 1px solid #dddddd;
+	float: left;
+	padding: 7px;
+	width: 945px;
+}
+#snippet #snippet-info #snippet-meta {
+	float: right;
+	padding: 7px 7px 0px 0px;
+	text-align: right;
+}
+#snippet #snippet-info #snippet-meta #snippet-meta-date {
+
+}
+#snippet #snippet-info #snippet-meta #snippet-meta-version {
+
+}
+
 /* Code */
 .code {
 	background: #333333;
@@ -164,13 +208,8 @@ body {
 	white-space: pre;
 	font-family: monospace;
 	display: block;
-	padding: 0px 21px 14px 21px;
+	padding: 0px 14px 7px 14px;
 	overflow: auto;
-	-webkit-border-radius: 0px 0px 3px 3px;
-	-moz-border-radius: 0px 0px 3px 3px;
-	-o-border-radius: 0px 0px 3px 3px;
-	-khtml-border-radius: 0px 0px 3px 3px;
-	border-radius: 0px 0px 3px 3px;
 }
 
 /* Comments */
@@ -195,7 +234,7 @@ body {
 	font-size: 14px;
 	font-weight: bold;
 	float: right;
-	padding: 3px 0px;
+	padding: 4px 0px;
 }
 #comments #comments-list {
 	
@@ -203,9 +242,8 @@ body {
 .comment {
 	border-bottom: 1px dashed #dddddd;
 	float: left;
-	margin: 14px 0px;
-	padding: 0px 0px 14px 0px;
-	width: 100%;
+	padding: 14px 7px;
+	width: 947px;
 }
 .comment .comment-user {
 	float: left;
@@ -233,4 +271,5 @@ body {
 	font-weight: bold;
 	font-size: 14px;
 	text-align: center;
+	margin-top: 10px;
 }

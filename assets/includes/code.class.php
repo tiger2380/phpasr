@@ -37,9 +37,11 @@ class code {
 		$each = preg_split('/\s+/', $this->source);
 		/* Foreach explode */
 		$output = $this->source;
-		$output = preg_replace('/"(.*)"/i', '<span style="color: ' . $theme['COLORS']['STRINGS'] . '">"$1"</span>', $output);
-		$output = preg_replace('/\'(.*)\'/i', '<span style="color: ' . $theme['COLORS']['STRINGS'] . '">\'$1\'</span>', $output);
-		$output = preg_replace('#/\*(.*)\*/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">/*$1*/</span>', $output);
+		/* Color the Strings */
+			$output = preg_replace('/"(.*)"/i', '<span style="color: ' . $theme['COLORS']['STRINGS'] . '">"$1"</span>', $output);
+			$output = preg_replace('/\'(.*)\'/i', '<span style="color: ' . $theme['COLORS']['STRINGS'] . '">\'$1\'</span>', $output);
+		/* Comments */
+			$output = preg_replace('#/\*(.*)\*/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">/*$1*/</span>', $output);
 		
 		
 		// $output = preg_replace('/$(.*)/i', '<span style="color: ' . $theme['COLORS']['VARIABLES'] . '">$$1</span>', $output);
@@ -47,8 +49,10 @@ class code {
 		// $output = preg_replace('#///[^<]+/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '"># $1</span>', $output);
 		// $output = preg_replace('/\#(.*)\n/i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '"># $1</span>', $output);
 		// $output = preg_replace('#/\*(.*)\*/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">/*$1*/</span>', $output);
+		
+		
+		/* Codes and Symbols */
 		foreach($each as $key) {
-			// echo $key . '<br />';
 			$key = trim($key);
 			if(isset($theme['CODE']) && in_array($key, $theme['CODE'])) {
 				$output = str_replace($key, '<span style="color: ' . $theme['COLORS']['CODE'] . '">' . $key . '</span>', $output);

@@ -48,7 +48,7 @@ include("assets/includes/core.inc.php");
 <div id="body" class="group width">
 	<div id="breadcrum">Repo > PHP > Syntax Highlighter</div>
 	<div id="snippet">
-		<div id="snippet-header">Syntax Highlighter <div id="snippet-meta">06/17/2012 &bull; Version 001</div></div>
+		<div id="snippet-header">Syntax Highlighter <div id="snippet-option"><a href="#" class="button row left">RAW</a><a href="#" class="button row right">Edit</a></div></div>
 		<div class="code">
 <?php
 $inputCode = 'class myClass {
@@ -75,10 +75,25 @@ $code = new code;
 echo $code->highlighter($inputCode);
 ?>
 		</div>
+		<div id="snippet-info" class="group">
+			<div id="snippet-info-avatar"><img alt="Admin" src="http://www.gravatar.com/avatar/?s=50" /></div>
+			<div id="snippet-info-username">
+				Admin
+				<br />
+				<a href="#">View Profile</a>
+			</div>
+			<div id="snippet-meta">
+				<div id="snippet-meta-version">Version 1.24.51 last updated</div>
+				<div id="snippet-meta-date">June 17th, 2012</div>
+				<div id="snippet-meta-views">50 Views</div>
+			 </div>
+			 <div class="clearer"> </div>
+			 <div id="snippet-tags"><b>Tags: </b> PHP Syntax Highlighter</div>
+		</div>
 	</div>
 	
 	<div id="comments">
-		<div id="comments-header">Comments <div id="comments-meta">120 Comments</div></div>
+		<div id="comments-header">Comments <div id="comments-meta">10 Comments</div></div>
 		<div id="comments-list" class="group">
 			<div class="comment">
 				<div class="comment-user">
