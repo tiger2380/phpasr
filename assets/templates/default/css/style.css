@@ -165,6 +165,7 @@ body {
 	font-family: monospace;
 	display: block;
 	padding: 0px 21px 14px 21px;
+	overflow: auto;
 	-webkit-border-radius: 0px 0px 3px 3px;
 	-moz-border-radius: 0px 0px 3px 3px;
 	-o-border-radius: 0px 0px 3px 3px;
