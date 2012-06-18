@@ -1,0 +1,7 @@
+class myClass {
+	public $var = 'Hello World';
+	
+	public function myFunc() {
+	
+	}
+}

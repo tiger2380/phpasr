@@ -50,13 +50,20 @@ include("assets/includes/core.inc.php");
 	<div id="snippet">
 		<div id="snippet-header">Syntax Highlighter <div id="snippet-meta">06/17/2012 &bull; Version 001</div></div>
 		<div class="code">
-class myClass {
-	public $var = 'Hello World';
+<?php
+$inputCode = ' class myClass {
+	public $var = "Hello World";
+	public $var = \'Hello World\';
 	
 	public function myFunc() {
-	
+		return $var;
 	}
-}
+}';
+
+include('assets/includes/code.class.php');
+$code = new code;
+echo $code->highlighter($inputCode);
+?>
 		</div>
 	</div>
 	
