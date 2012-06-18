@@ -41,8 +41,10 @@ class code {
 		$output = preg_replace('/\'(.*)\'/i', '<span style="color: ' . $theme['COLORS']['STRINGS'] . '">\'$1\'</span>', $output);
 		$output = preg_replace('#/\*(.*)\*/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">/*$1*/</span>', $output);
 		
-		// $output = preg_replace('#///[^<]+/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '"># $1</span>', $output);
 		
+		// $output = preg_replace('/$(.*)/i', '<span style="color: ' . $theme['COLORS']['VARIABLES'] . '">$$1</span>', $output);
+		// $output = preg_replace('#/\\#(.*)/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">/*$1*/</span>', $output);
+		// $output = preg_replace('#///[^<]+/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '"># $1</span>', $output);
 		// $output = preg_replace('/\#(.*)\n/i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '"># $1</span>', $output);
 		// $output = preg_replace('#/\*(.*)\*/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">/*$1*/</span>', $output);
 		foreach($each as $key) {
