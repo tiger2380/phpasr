@@ -37,6 +37,14 @@ class code {
 		$each = preg_split('/\s+/', $this->source);
 		/* Foreach explode */
 		$output = $this->source;
+		$output = preg_replace('/"(.*)"/i', '<span style="color: ' . $theme['COLORS']['STRINGS'] . '">"$1"</span>', $output);
+		$output = preg_replace('/\'(.*)\'/i', '<span style="color: ' . $theme['COLORS']['STRINGS'] . '">\'$1\'</span>', $output);
+		$output = preg_replace('#/\*(.*)\*/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">/*$1*/</span>', $output);
+		
+		// $output = preg_replace('#///[^<]+/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '"># $1</span>', $output);
+		
+		// $output = preg_replace('/\#(.*)\n/i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '"># $1</span>', $output);
+		// $output = preg_replace('#/\*(.*)\*/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">/*$1*/</span>', $output);
 		foreach($each as $key) {
 			// echo $key . '<br />';
 			$key = trim($key);
@@ -49,6 +57,9 @@ class code {
 			if(isset($theme['SYMBOLS']) && in_array($key, $theme['SYMBOLS'])) {
 				$output = str_replace($key, '<span style="color: ' . $theme['COLORS']['SYMBOLS'] . '">' . $key . '</span>', $output);
 			}
+			
+			
+			
 		}
 		
 		//foreach($theme['SYMBOLS'] as $key) {

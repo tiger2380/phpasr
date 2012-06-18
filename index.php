@@ -55,10 +55,17 @@ $inputCode = 'class myClass {
 	public $var = "Hello World";
 	public $var = \'Hello World\';
 	
+	function __construct($theme = \'default\') {
+		$this->theme = $theme;
+	}
+	
 	// Comment
 	# Comment
 	/* Comment */
 	public function myFunc ( ) {
+		return $var;
+	}
+	public function myFunc(__FILE__) {
 		return $var;
 	}
 }';
