@@ -45,4 +45,12 @@ This is not really a **Roadmap** but a project list, we will prioritize later
 	
 	<dt>Version Control</dt>
 		<dd>Wiki like version control Edit/Revert/Delete</dd>
+		
+	<dt>User Profiles</dt>
+		<dd>If we use phpbb login, pull data from their as well as:</dd>
+		
+		<dd>List of snippet history</dd>
+		<dd>List of user favourites</dd>
+		<dd>User bio</dd>
+		<dd>Anything else we decide we need to add</dd>
 </dl>
