@@ -51,9 +51,9 @@ include("assets/includes/core.inc.php");
 		<div id="snippet-header">Syntax Highlighter <div id="snippet-meta">06/17/2012 &bull; Version 001</div></div>
 		<div class="code">
 class myClass {
-	public $var = 'Hello World';
+	public <font color=green>$var</font> = <font color=FF0FF0>'Hello World'</font>;
 	
-	public function myFunc() {
+	public <font color=3399FF>function</font> myFunc() {
 	
 	}
 }
