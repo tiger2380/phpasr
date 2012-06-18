@@ -212,6 +212,22 @@ body {
 	overflow: auto;
 }
 
+.fields {
+	background: #efefef;
+	border-right: 1px solid #666666;
+	border-left: 1px solid #666666;
+	border-bottom: 1px solid #666666;
+	color: #000000;
+	font-family: monospace;
+	display: block;
+	padding: 7px 21px;
+	-webkit-border-radius: 0px 0px 3px 3px;
+	-moz-border-radius: 0px 0px 3px 3px;
+	-o-border-radius: 0px 0px 3px 3px;
+	-khtml-border-radius: 0px 0px 3px 3px;
+	border-radius: 0px 0px 3px 3px;
+}
+
 /* Comments */
 #comments {
 	margin: 21px 0 0 0;
