@@ -99,31 +99,8 @@ class code {
 		return $output;
 	}
 	
-	function startsWith($haystack,$needle,$case=true) {
-		if($case){return (strcmp(substr($haystack, 0, strlen($needle)),$needle)===0);}
-		return (strcasecmp(substr($haystack, 0, strlen($needle)),$needle)===0);
-	}
-	
-	public function value_in_array($array, $find){
-		$exists = FALSE;
-			if(!is_array($array)){
-			return;
-		}
-		foreach ($array as $key => $value) {
-			if($find == $value){
-				$exists = TRUE;
-			}
-		}
-		return $exists;
-	}
-	
-	function preg_replace_array($pattern, $replacement, $subject, $limit=-1) {
-		if (is_array($subject)) {
-			foreach ($subject as &$value) $value=preg_replace_array($pattern, $replacement, $value, $limit);
-			return $subject;
-		} else {
-			return preg_replace($pattern, $replacement, $subject, $limit);
-		}
+	public function cache() {
+		
 	}
 }
 ?>
