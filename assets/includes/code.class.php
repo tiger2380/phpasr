@@ -34,8 +34,10 @@ class code {
 		/* Remove first \n line break */
 		$this->source = substr($this->source, strpos($this->source, "\n") + 1);
 		/* String Legenth */
-		 $length      = strlen($this->source);
+		$length      = strlen($this->source);
 		/* Handle the code char by char */
+		$this->source = preg_replace('/\(/', ' ( ', $this->source);
+		$this->source = preg_replace('/\)/', ' ) ', $this->source);
 		$each = preg_split('/\s+/', $this->source);
 		/* Foreach explode */
 		$output = $this->source;
@@ -45,6 +47,7 @@ class code {
 			$output = preg_replace('/\'(.*)\'/i', '<span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">\'</span><span style="color: ' . $theme['COLORS']['STRINGS'] . '">$1</span><span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">\'</span>', $output);
 		/* Comments */
 			$output = preg_replace('#/\*(.*)\*/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">/*$1*/</span>', $output); /* Type: This */
+			/* Remember: [^(\*\/)] */
 			$output = preg_replace('/\#(\s+)([A-Za-z0-9 ]+)/i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">#$1$2</span>', $output); /* Type: # */
 			$output = preg_replace('#\//(\s+)([A-Za-z0-9 ]+)#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">//$1$2</span>', $output); /* Type: // */
 		/* This */
@@ -56,7 +59,7 @@ class code {
 		/* Symbols */
 			$output = preg_replace('/({|}|\(|\)|\[|\])/i', '<span style="color: ' . $theme['COLORS']['SYMBOLS'] . '">$1</span>', $output);
 			$output = preg_replace('/(@|\%|\&|\|)/i', '<span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">$1</span>', $output);
-			$output = preg_replace('#(?!/)(\*)|(\*)(?!/)#i', '<span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">$1</span>', $output);
+			$output = preg_replace('#(?!^/)(\*)|(\*)(?!/)#i', '<span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">$1</span>', $output);
 		
 		/* Codes */
 		/* WE uses this mess of code as not to duplicate highlights */
@@ -83,6 +86,15 @@ class code {
 		foreach($change_code2 as $key) {
 			$output = str_replace($key, '<span style="color: ' . $theme['COLORS']['CODE'] . '">' . $key . '</span>', $output);
 		}
+		
+		/* Fixes the space between ( & ) we made above so code inside of it would be highlighted */
+		$output = str_replace(' <span style="color: ' . $theme['COLORS']['SYMBOLS'] . '">(</span> ', '<span style="color: ' . $theme['COLORS']['SYMBOLS'] . '">(</span>', $output);
+		$output = str_replace(' <span style="color: ' . $theme['COLORS']['SYMBOLS'] . '">)</span> ', '<span style="color: ' . $theme['COLORS']['SYMBOLS'] . '">)</span>', $output);
+		
+		/* Fix Comments */
+		$output = str_replace('<span style="color: #007700">/<span style="color: #ffff00">*</span>', '<span style="color: #007700">/*', $output);
+		$output = str_replace('<span style="color: #ffff00">*</span>/</span>', '*/</span>', $output);
+		
 		/* Return highlighted code */
 		return $output;
 	}

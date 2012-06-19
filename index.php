@@ -80,6 +80,9 @@ $inputCode = 'class myClass {
 	/* Comment */
 	/* Comment */
 	/* Comment */
+	
+	/************* Comment */
+	
 	/* 
 		Comment 
 	*/
