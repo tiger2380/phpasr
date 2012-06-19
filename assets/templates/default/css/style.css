@@ -51,14 +51,15 @@ body {
 	float: left;
 }
 #header ul#navigation li:hover, #header ul#navigation li.active {
-	background: #ffffff;
+	background: #efefef url('../images/header-light.png');
+	border-bottom: 1px solid #dddddd;
 }
 #header ul#navigation li a {
 	border-right: 1px solid #666666;
 	color: #ffffff;
 	font-size: 21px;
 	padding: 18px 14px;
-	line-height: 3.1em;
+	line-height: 3em;
 }
 #header ul#navigation li:hover a, #header ul#navigation li.active a {
 	color: #222222;
@@ -114,7 +115,7 @@ body {
 	padding-top: 14px;
 }
 #body #breadcrum {
-	background: #efefef;
+	background: #efefef url('../images/header-light.png');
 	border: 1px solid #dddddd;
 	padding: 7px;
 	margin: 7px 0 0 0;
@@ -141,7 +142,7 @@ body {
 	border: 1px solid #666666;
 	color: #ffffff;
 	font-size: 21px;
-	padding: 7px 14px;
+	padding: 7px 7px 7px 14px;
 	
 	-webkit-border-radius: 3px 3px 0px 0px;
 	-moz-border-radius: 3px 3px 0px 0px;

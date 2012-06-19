@@ -77,7 +77,8 @@ $theme = array(
 		'CODE2' => '#007780',
 		'VARIABLES' => '#097109',
 		'STRINGS' => '#f57900',
-		'SYMBOLS' => '#007700',
+		'SYMBOLS' => '#009900',
+		'SYMBOLS2' => '#ffff00',
 		'COMMENTS' => '#007700',
 		),
 );

@@ -31,53 +31,59 @@ class code {
         $this->source = str_replace("\r", "\n", $this->source);
         /* Replace all spaces to a common form */
 		$this->source = "\n" . $this->source . "\n";
+		/* Remove first \n line break */
+		$this->source = substr($this->source, strpos($this->source, "\n") + 1);
 		/* String Legenth */
 		 $length      = strlen($this->source);
 		/* Handle the code char by char */
 		$each = preg_split('/\s+/', $this->source);
 		/* Foreach explode */
 		$output = $this->source;
+		
 		/* Color the Strings */
-			$output = preg_replace('/"(.*)"/i', '<span style="color: ' . $theme['COLORS']['STRINGS'] . '">"$1"</span>', $output);
-			$output = preg_replace('/\'(.*)\'/i', '<span style="color: ' . $theme['COLORS']['STRINGS'] . '">\'$1\'</span>', $output);
+			$output = preg_replace('/"(.*)"/i', '<span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">"</span><span style="color: ' . $theme['COLORS']['STRINGS'] . '">$1</span><span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">"</span>', $output);
+			$output = preg_replace('/\'(.*)\'/i', '<span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">\'</span><span style="color: ' . $theme['COLORS']['STRINGS'] . '">$1</span><span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">\'</span>', $output);
 		/* Comments */
-			$output = preg_replace('#/\*(.*)\*/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">/*$1*/</span>', $output);
+			$output = preg_replace('#/\*(.*)\*/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">/*$1*/</span>', $output); /* Type: This */
+			$output = preg_replace('/\#(\s+)([A-Za-z0-9 ]+)/i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">#$1$2</span>', $output); /* Type: # */
+			$output = preg_replace('#\//(\s+)([A-Za-z0-9 ]+)#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">//$1$2</span>', $output); /* Type: // */
+		/* This */
+			$output = preg_replace('/\$this->([A-Za-z0-9]+)(\s|=)/i', '<span style="color: ' . $theme['COLORS']['CODE'] . '">$this-></span><span style="color: ' . $theme['COLORS']['MASTER'] . '">$1</span>$2', $output);
 		
+		/* Variables */
+			$output = preg_replace('/\$([A-Za-z0-9]+)(\s|=|\[|;)/i', '<span style="color: ' . $theme['COLORS']['VARIABLES'] . '">$$1</span>$2', $output);
 		
-		// $output = preg_replace('/$(.*)/i', '<span style="color: ' . $theme['COLORS']['VARIABLES'] . '">$$1</span>', $output);
-		// $output = preg_replace('#/\\#(.*)/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">/*$1*/</span>', $output);
-		// $output = preg_replace('#///[^<]+/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '"># $1</span>', $output);
-		// $output = preg_replace('/\#(.*)\n/i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '"># $1</span>', $output);
-		// $output = preg_replace('#/\*(.*)\*/#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">/*$1*/</span>', $output);
+		/* Symbols */
+			$output = preg_replace('/({|}|\(|\)|\[|\])/i', '<span style="color: ' . $theme['COLORS']['SYMBOLS'] . '">$1</span>', $output);
+			$output = preg_replace('/(@|\%|\&|\|)/i', '<span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">$1</span>', $output);
+			$output = preg_replace('#(?!/)(\*)|(\*)(?!/)#i', '<span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">$1</span>', $output);
 		
-		
-		/* Codes and Symbols */
+		/* Codes */
+		/* WE uses this mess of code as not to duplicate highlights */
+		$change_code = array();
+		$change_code2 = array();
+		/* Search exploded list */
 		foreach($each as $key) {
+			/* Trim space */
 			$key = trim($key);
+			/* Check what values exist */
 			if(isset($theme['CODE']) && in_array($key, $theme['CODE'])) {
-				$output = str_replace($key, '<span style="color: ' . $theme['COLORS']['CODE'] . '">' . $key . '</span>', $output);
+				$change_code[] = $key;
 			}
 			if(isset($theme['CODE2']) && in_array($key, $theme['CODE2'])) {
-				$output = str_replace($key, '<span style="color: ' . $theme['COLORS']['CODE2'] . '">' . $key . '</span>', $output);
+				$change_code2[]= $key;
 			}
-			if(isset($theme['SYMBOLS']) && in_array($key, $theme['SYMBOLS'])) {
-				$output = str_replace($key, '<span style="color: ' . $theme['COLORS']['SYMBOLS'] . '">' . $key . '</span>', $output);
-			}
-			
-			
-			
 		}
-		
-		//foreach($theme['SYMBOLS'] as $key) {
-			// $output = str_replace($key, '<span style="color: ' . $theme['COLORS']['SYMBOLS'] . '">' . $key . '</span>', $output);
-		// }
-		
-		// foreach($theme as $key => $value) {
-			// $code = str_replace($key, '<span style="color: ' . $value . '">' . $key . '</span>', $code);
-		// }
-		
-		// $code = preg_replace('/\$([A-Za-z0-9]+)( =)|\$(.*)(;)/is', '<span style="color: ' . $theme['variable'] . '">$$1$3</span>$2$4', $code);
-		
+		/* Call only one value so we dont have duplicates */
+		$change_code = array_unique($change_code);
+		foreach($change_code as $key) {
+			$output = str_replace($key, '<span style="color: ' . $theme['COLORS']['CODE'] . '">' . $key . '</span>', $output);
+		}
+		$change_code2 = array_unique($change_code2);
+		foreach($change_code2 as $key) {
+			$output = str_replace($key, '<span style="color: ' . $theme['COLORS']['CODE'] . '">' . $key . '</span>', $output);
+		}
+		/* Return highlighted code */
 		return $output;
 	}
 	

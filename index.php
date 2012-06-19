@@ -52,12 +52,23 @@ include("assets/includes/core.inc.php");
 		<div class="code">
 <?php
 $inputCode = 'class myClass {
+	public $var;
+	public $var[\'hello\'];
 	public $var = "Hello World";
 	public $var = \'Hello World\';
 	
 	function __construct($theme = \'default\') {
 		$this->theme = $theme;
+		$this->theme=$theme;
+		$this->theme    = $theme;
 	}
+	
+	@
+	*
+	%
+	&
+	|
+	/
 	
 	// Comment
 	# Comment
@@ -65,6 +76,13 @@ $inputCode = 'class myClass {
 	public function myFunc ( ) {
 		return $var;
 	}
+	
+	/* Comment */
+	/* Comment */
+	/* Comment */
+	/* 
+		Comment 
+	*/
 	public function myFunc(__FILE__) {
 		return $var;
 	}
