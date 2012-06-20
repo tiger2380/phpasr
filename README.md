@@ -18,39 +18,36 @@ Road Map
 This is not really a **Roadmap** but a project list, we will prioritize later
 
 ----------------------------------------------------------------
-<dl>
-	<dt>Develop Core Functions</dt>
-		<dd>Snippet Manager</dd>
-		<dd>User Login/Registration</dd>	
-		<dd>Integration with phpbb (Per Alex Permission)</dd>	
-		<dd>Admin/Moderator/Owner Control</dd>
-	
-	<dt>Snippet Repo/List</dt>
-		<dd>Categories</dd>
-		<dd> Newest Snippets</dd>
-		<dd> Most popular</dd>
-		<dd> Favorite Snippets</dd>
-	
-	<dt>Snippets</dt>
-		<dd>Snippet Code Display
-		<dd> Highlighting like any code editor...</dd>
-		<dd> Raw Snippet Feature</dd>
-		<dd> Version Control</dd>
-		<dd> User Comments</dd>
-		<dd> Bug Tracker<dd>
-	
-	<dt>Bug Tracker</dt>
-		<dd>Tracking numbers for each snippet</dd>
-		<dd> User reports</dd>
-	
-	<dt>Version Control</dt>
-		<dd>Wiki like version control Edit/Revert/Delete</dd>
 
-	<dt>User Profiles</dt>
-		<dd>If we use phpbb login, pull data from their as well as:</dd>
-		<dd>List of snippet history</dd>
-		<dd>List of user favourites</dd>
-		<dd>User bio</dd>
-		<dd>Anything else we decide we need to add</dd>
- </dl>
-</dl>
+**Develop Core Functions**
+	* Snippet Manager
+	* User Login/Registration
+	* Integration with phpbb (Per Alex Permission)
+	* Admin/Moderator/Owner Control
+
+**Snippet Repo/List**
+	* Categories
+	* Newest Snippets
+	* Most popular
+	* Favorite Snippets
+**Snippets**
+	* Snippet Code Display 
+	* Highlighting like any code editor...
+	* Raw Snippet Feature
+	* Version Control
+	* User Comments
+	* Bug Tracker
+	
+**Bug Tracker**
+	* Tracking numbers for each snippet
+	* User reports
+
+**Version Control**
+	* Wiki like version control Edit/Revert/Delete
+
+**User Profiles**
+	* If we use phpbb login, pull data from their as well as:
+	* List of snippet history
+	* List of user favourites
+	* User bio
+	* Anything else we decide we need to add 
