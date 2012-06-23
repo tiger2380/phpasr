@@ -44,11 +44,15 @@ body {
 	margin: 0px;
 	line-height: 1.5em;
 }
+#header #logo a {
+	color: #ffffff;
+}
 #header ul#navigation {
 	float: left;
 }
 #header ul#navigation li {
 	float: left;
+	position: relative;
 }
 #header ul#navigation li:hover, #header ul#navigation li.active {
 	background: #efefef url('../images/header-light.png');
@@ -65,7 +69,33 @@ body {
 	color: #222222;
 }
 #header ul#navigation li ul {
+	background: #efefef url('../images/header.png');
+	
 	display: none;
+	
+	border-top: 1px solid #666666;
+	border-right: 1px solid #666666;
+	border-left: 1px solid #666666;
+	
+	position: absolute;
+	top: 63px;
+	left: -1px;
+}
+#header ul#navigation li:hover ul {
+	display: inline;
+}
+#header ul#navigation li:hover ul li {
+	border-bottom: 1px solid #666666;
+	float: left;
+	width: 150px;
+}
+#header ul#navigation li:hover ul li a {
+	border: none;
+	color: #ffffff;
+}
+#header ul#navigation li:hover ul li:hover a {
+	background: #efefef url('../images/header-light.png');
+	color: #222222;
 }
 #header #search {
 	background: #ffffff;
@@ -130,6 +160,56 @@ body {
 #footer {
 	border-top: 1px solid #dddddd;
 	margin-top: 14px;
+}
+
+/* Index */
+#splash {
+	background: #323236 url('../images/header-light.png');
+	border: 1px solid #dddddd;
+	height: 200px;
+	width: 100%;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	-khtml-border-radius: 7px;
+	border-radius: 7px;
+}
+#col-wrap  {
+	margin: 10px 0 0 0;
+}
+#col-wrap  .col {
+	
+}
+#col-wrap  .col.left.hp {
+	float: left;
+	margin: 0 7px 0 0;
+	width: 310px;
+}
+#col-wrap  .col.center.hp {
+	float: left;
+	margin: 0 0 0 7px;
+	width: 310px;
+}
+#col-wrap  .col.right.hp {
+	float: right;
+	margin: 0 0 0 7px;
+	width: 310px;
+}
+#col-wrap  .col .col-head {
+	background: #323236 url('../images/header-light.png');
+	border: 1px solid #dddddd;
+	color: #333333;
+	font-size: 21px;
+	padding: 7px 7px 7px 14px;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+}
+#col-wrap  .col .col-body {
+	padding: 7px 7px 7px 14px;
 }
 
 /* Snippet */

@@ -41,7 +41,6 @@ class code {
 		$each = preg_split('/\s+/', $this->source);
 		/* Foreach explode */
 		$output = $this->source;
-		
 		/* Color the Strings */
 			$output = preg_replace('/"(.*)"/i', '<span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">"</span><span style="color: ' . $theme['COLORS']['STRINGS'] . '">$1</span><span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">"</span>', $output);
 			$output = preg_replace('/\'(.*)\'/i', '<span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">\'</span><span style="color: ' . $theme['COLORS']['STRINGS'] . '">$1</span><span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">\'</span>', $output);
@@ -52,15 +51,12 @@ class code {
 			$output = preg_replace('#\//(\s+)([A-Za-z0-9 ]+)#i', '<span style="color: ' . $theme['COLORS']['COMMENTS'] . '">//$1$2</span>', $output); /* Type: // */
 		/* This */
 			$output = preg_replace('/\$this->([A-Za-z0-9]+)(\s|=)/i', '<span style="color: ' . $theme['COLORS']['CODE'] . '">$this-></span><span style="color: ' . $theme['COLORS']['MASTER'] . '">$1</span>$2', $output);
-		
 		/* Variables */
 			$output = preg_replace('/\$([A-Za-z0-9]+)(\s|=|\[|;)/i', '<span style="color: ' . $theme['COLORS']['VARIABLES'] . '">$$1</span>$2', $output);
-		
 		/* Symbols */
 			$output = preg_replace('/({|}|\(|\)|\[|\])/i', '<span style="color: ' . $theme['COLORS']['SYMBOLS'] . '">$1</span>', $output);
 			$output = preg_replace('/(@|\%|\&|\|)/i', '<span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">$1</span>', $output);
 			$output = preg_replace('#(?!^/)(\*)|(\*)(?!/)#i', '<span style="color: ' . $theme['COLORS']['SYMBOLS2'] . '">$1</span>', $output);
-		
 		/* Codes */
 		/* WE uses this mess of code as not to duplicate highlights */
 		$change_code = array();
