@@ -50,45 +50,10 @@ include("assets/includes/core.inc.php");
 		<div id="snippet-header">Syntax Highlighter <div id="snippet-option"><a href="#" class="button row left">RAW</a><a href="#" class="button row right">Edit</a></div></div>
 		<div class="code">
 <?php
-$inputCode = 'class myClass {
-	public $var;
-	public $var[\'hello\'];
-	public $var = "Hello World";
-	public $var = \'Hello World\';
-	
-	function __construct($theme = \'default\') {
-		$this->theme = $theme;
-		$this->theme=$theme;
-		$this->theme    = $theme;
-	}
-	
-	@
-	*
-	%
-	&
-	|
-	/
-	
-	// Comment
-	# Comment
-	/* Comment */
-	public function myFunc ( ) {
-		return $var;
-	}
-	
-	/* Comment */
-	/* Comment */
-	/* Comment */
-	
-	/************* Comment */
-	
-	/* 
-		Comment 
-	*/
-	public function myFunc(__FILE__) {
-		return $var;
-	}
-}';
+
+
+$inputCode = file_get_contents('code.txt', true);
+$inputCode =  nl2br($inputCode);
 
 include('assets/includes/code.class.php');
 $code = new code;
